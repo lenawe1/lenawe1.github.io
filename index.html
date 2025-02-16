@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenawei Safaris</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="styles.css" as="style">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Lenawei Safaris</h1>
+        <nav>
+            <ul>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#itineraries">Itineraries</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#map">Safari Map</a></li>
+                <li><a href="#team">Meet Our Team</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="wallpaper">
+        <img src="images/wallpaper.webp" alt="Safari Wallpaper" class="wallpaper">
+    </section>
+    
+    <section id="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item"><img src="images/lion.webp" alt="Lion" loading="lazy"></div>
+            <div class="gallery-item"><img src="images/elephants.webp" alt="Elephants" loading="lazy"></div>
+            <div class="gallery-item"><img src="images/giraffes.webp" alt="Giraffes" loading="lazy"></div>
+        </div>
+    </section>
+    
+    <section id="itineraries">
+        <h2>Itineraries</h2>
+        <p>Explore our detailed safari plans, including destinations, activities, and schedules.</p>
+        <div class="itinerary-list">
+            <p>3-Day Safari Adventure</p>
+            <p>7-Day Wildlife Expedition</p>
+            <p>Custom Private Tours</p>
+        </div>
+    </section>
+    
+    <section id="booking">
+        <h2>Book Your Safari</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <section id="testimonials">
+        <h2>What Our Guests Say</h2>
+        <p>Read the experiences of past adventurers who joined our safaris.</p>
+    </section>
+    
+    <section id="map">
+        <h2>Interactive Safari Map</h2>
+        <p>Check out our routes and destinations on an interactive map.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.485373482745!2d36.8219465!3d-1.2863895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173f7f5f8e8b%3A0x9c2e4d5f826c9c7c!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1679828109246!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+    
+    <section id="team">
+        <h2>Meet Our Team</h2>
+        <div id="team-container">
+            <div class="team-member" onclick="expandImage(this)">
+                <img src="images/lucas.webp" alt="Lucas Bell" loading="lazy">
+                <p>Lucas Bell - Safari Guide</p>
+                <p class="bio">Expert in tracking wildlife and leading immersive safari experiences.</p>
+            </div>
+            <div class="team-member" onclick="expandImage(this)">
+                <img src="images/titus.webp" alt="Titus Gitonga" loading="lazy">
+                <p>Titus Gitonga - Wildlife Expert</p>
+                <p class="bio">Specialist in African wildlife behavior and conservation.</p>
+            </div>
+            <div class="team-member" onclick="expandImage(this)">
+                <img src="images/lucy.webp" alt="Lucy Kago" loading="lazy">
+                <p>Lucy Kago - Tour Coordinator</p>
+                <p class="bio">Ensures smooth planning and organization of safari adventures.</p>
+            </div>
+            <div class="team-member" onclick="expandImage(this)">
+                <img src="images/pauline.webp" alt="Pauline Tamara" loading="lazy">
+                <p>Pauline Tamara - Customer Relations</p>
+                <p class="bio">Provides top-notch customer service and guest satisfaction.</p>
+            </div>
+            <div class="team-member" onclick="expandImage(this)">
+                <img src="images/jackson.webp" alt="Jackson Wachiuri" loading="lazy">
+                <p>Jackson Wachiuri - Logistics Manager</p>
+                <p class="bio">Handles all logistics and ensures seamless safari operations.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Lenawei Safaris. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function expandImage(element) {
+            var modal = document.getElementById("modal");
+            var modalImg = document.getElementById("modal-img");
+            modal.style.display = "block";
+            modalImg.src = element.querySelector("img").src;
+        }
+        
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
