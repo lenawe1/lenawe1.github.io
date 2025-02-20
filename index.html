@@ -46,143 +46,51 @@
                 display: none;
                 flex-direction: column;
                 text-align: center;
+                background: #4CAF50;
+                position: absolute;
+                width: 100%;
+                top: 50px;
+                left: 0;
+                padding: 10px 0;
+                transition: max-height 0.3s ease-in-out;
+                max-height: 0;
+                overflow: hidden;
             }
             nav ul.active {
                 display: flex;
+                max-height: 500px;
             }
         }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Welcome to Lenawei Safaris</h1>
-        <button class="menu-toggle">☰ Menu</button>
-        <nav>
-            <ul>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#itineraries">Itineraries</a></li>
-                <li><a href="#booking">Booking</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#map">Safari Map</a></li>
-                <li><a href="#team">Meet Our Team</a></li>
-                <li><a href="#games">Games</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="wallpaper">
-        <img src="images/wallpaper.jpg" alt="Safari Wallpaper" class="wallpaper">
-    </section>
-    
-    <section id="gallery">
-        <h2>Photo Gallery</h2>
-        <div class="gallery-container">
-            <div class="gallery-item"><img src="images/gallery/lion.jpg" alt="Lion"></div>
-            <div class="gallery-item"><img src="images/gallery/elephants.jpg" alt="Elephants"></div>
-            <div class="gallery-item"><img src="images/gallery/giraffes.jpg" alt="Giraffes"></div>
-            <div class="gallery-item"><img src="images/gallery/zebra.jpg" alt="Zebra"></div>
-            <div class="gallery-item"><img src="images/gallery/cheetah.jpg" alt="Cheetah"></div>
-            <div class="gallery-item"><img src="images/gallery/balloons.jpg" alt="Hot Air Balloon"></div>
-        </div>
-    </section>
-    
-    <section id="team">
-        <h2>Meet Our Team</h2>
-        <div class="team-container">
-            <div class="team-member"><img src="images/team/lucy-kago.jpg" alt="Lucy Kago"><p>Lucy Kago</p></div>
-            <div class="team-member"><img src="images/team/titus-gitonga.jpg" alt="Titus Gitonga"><p>Titus Gitonga</p></div>
-            <div class="team-member"><img src="images/team/lucas-bell.jpg" alt="Lucas Bell"><p>Lucas Bell</p></div>
-            <div class="team-member"><img src="images/team/jackson-wachiuri.jpg" alt="Jackson Wachiuri"><p>Jackson Wachiuri</p></div>
-            <div class="team-member"><img src="images/team/pauline-tamara.jpg" alt="Pauline Tamara"><p>Pauline Tamara</p></div>
-        </div>
-    </section>
-    
-    <section id="booking">
-        <h2>Book Your Safari</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="date">Preferred Date:</label>
-            <input type="date" id="date" name="date" required>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-    
-    <section id="games">
-        <h2>Safari Games</h2>
-        <p>Enjoy interactive safari-themed games!</p>
-        <ul>
-            <li><a href="games/memory-game.html">Memory Game</a></li>
-            <li><a href="games/quiz.html">Wildlife Quiz</a></li>
-            <li><a href="games/puzzle.html">Animal Puzzle</a></li>
-        </ul>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Lenawei Safaris. All rights reserved.</p>
-    </footer>
-    
-    <script>
-        document.querySelector(".menu-toggle").addEventListener("click", function() {
-            document.querySelector("nav ul").classList.toggle("active");
-        });
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lenawei Safaris</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preload" href="styles.css" as="style">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
+        form {
             display: flex;
-            justify-content: space-around;
-            background: #4CAF50;
-            margin: 0;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
-        nav ul li {
+        input, button {
             padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
         }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        .menu-toggle {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
+        button {
             background: #4CAF50;
             color: white;
             border: none;
-            padding: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
         }
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-            nav ul {
-                display: none;
-                flex-direction: column;
-                text-align: center;
-            }
-            nav ul.active {
-                display: flex;
-            }
+        button:hover {
+            background: #45a049;
+        }
+        nav ul li a.active {
+            border-bottom: 2px solid yellow;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -204,29 +112,18 @@
     </header>
     
     <section id="wallpaper">
-        <img src="images/wallpaper.jpg" alt="Safari Wallpaper" class="wallpaper">
+        <img src="images/wallpaper.jpg" alt="Safari Wallpaper" class="wallpaper" loading="lazy">
     </section>
     
     <section id="gallery">
         <h2>Photo Gallery</h2>
         <div class="gallery-container">
-            <div class="gallery-item"><img src="images/gallery/lion.jpg" alt="Lion"></div>
-            <div class="gallery-item"><img src="images/gallery/elephants.jpg" alt="Elephants"></div>
-            <div class="gallery-item"><img src="images/gallery/giraffes.jpg" alt="Giraffes"></div>
-            <div class="gallery-item"><img src="images/gallery/zebra.jpg" alt="Zebra"></div>
-            <div class="gallery-item"><img src="images/gallery/cheetah.jpg" alt="Cheetah"></div>
-            <div class="gallery-item"><img src="images/gallery/balloons.jpg" alt="Hot Air Balloon"></div>
-        </div>
-    </section>
-    
-    <section id="team">
-        <h2>Meet Our Team</h2>
-        <div class="team-container">
-            <div class="team-member"><img src="images/team/lucy-kago.jpg" alt="Lucy Kago"><p>Lucy Kago</p></div>
-            <div class="team-member"><img src="images/team/titus-gitonga.jpg" alt="Titus Gitonga"><p>Titus Gitonga</p></div>
-            <div class="team-member"><img src="images/team/lucas-bell.jpg" alt="Lucas Bell"><p>Lucas Bell</p></div>
-            <div class="team-member"><img src="images/team/jackson-wachiuri.jpg" alt="Jackson Wachiuri"><p>Jackson Wachiuri</p></div>
-            <div class="team-member"><img src="images/team/pauline-tamara.jpg" alt="Pauline Tamara"><p>Pauline Tamara</p></div>
+            <div class="gallery-item"><img src="images/gallery/lion.jpg" alt="Lion" loading="lazy"></div>
+            <div class="gallery-item"><img src="images/gallery/elephants.jpg" alt="Elephants" loading="lazy"></div>
+            <div class="gallery-item"><img src="images/gallery/giraffes.jpg" alt="Giraffes" loading="lazy"></div>
+            <div class="gallery-item"><img src="images/gallery/zebra.jpg" alt="Zebra" loading="lazy"></div>
+            <div class="gallery-item"><img src="images/gallery/cheetah.jpg" alt="Cheetah" loading="lazy"></div>
+            <div class="gallery-item"><img src="images/gallery/balloons.jpg" alt="Hot Air Balloon" loading="lazy"></div>
         </div>
     </section>
     
@@ -243,23 +140,30 @@
         </form>
     </section>
     
-    <section id="games">
-        <h2>Safari Games</h2>
-        <p>Enjoy interactive safari-themed games!</p>
-        <ul>
-            <li><a href="games/memory-game.html">Memory Game</a></li>
-            <li><a href="games/quiz.html">Wildlife Quiz</a></li>
-            <li><a href="games/puzzle.html">Animal Puzzle</a></li>
-        </ul>
-    </section>
-    
     <footer>
         <p>&copy; 2025 Lenawei Safaris. All rights reserved.</p>
     </footer>
     
     <script>
         document.querySelector(".menu-toggle").addEventListener("click", function() {
-            document.querySelector("nav ul").classList.toggle("active");
+            let navMenu = document.querySelector("nav ul");
+            navMenu.classList.toggle("active");
+        });
+        
+        window.addEventListener("scroll", function() {
+            let sections = document.querySelectorAll("section");
+            let navLinks = document.querySelectorAll("nav ul li a");
+            
+            sections.forEach((section, index) => {
+                let top = window.scrollY;
+                let offset = section.offsetTop - 100;
+                let height = section.offsetHeight;
+                
+                if (top >= offset && top < offset + height) {
+                    navLinks.forEach(link => link.classList.remove("active"));
+                    navLinks[index].classList.add("active");
+                }
+            });
         });
     </script>
 </body>
