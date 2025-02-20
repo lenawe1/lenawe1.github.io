@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -71,26 +71,162 @@
     </header>
     
     <section id="wallpaper">
-        <img src="images/wallpaper.webp" alt="Safari Wallpaper" class="wallpaper">
+        <img src="images/wallpaper.jpg" alt="Safari Wallpaper" class="wallpaper">
     </section>
     
     <section id="gallery">
         <h2>Photo Gallery</h2>
         <div class="gallery-container">
-            <div class="gallery-item"><img src="images/lion.webp" alt="Lion"></div>
-            <div class="gallery-item"><img src="images/elephants.webp" alt="Elephants"></div>
-            <div class="gallery-item"><img src="images/giraffes.webp" alt="Giraffes"></div>
+            <div class="gallery-item"><img src="images/gallery/lion.jpg" alt="Lion"></div>
+            <div class="gallery-item"><img src="images/gallery/elephants.jpg" alt="Elephants"></div>
+            <div class="gallery-item"><img src="images/gallery/giraffes.jpg" alt="Giraffes"></div>
+            <div class="gallery-item"><img src="images/gallery/zebra.jpg" alt="Zebra"></div>
+            <div class="gallery-item"><img src="images/gallery/cheetah.jpg" alt="Cheetah"></div>
+            <div class="gallery-item"><img src="images/gallery/balloons.jpg" alt="Hot Air Balloon"></div>
         </div>
     </section>
     
     <section id="team">
         <h2>Meet Our Team</h2>
         <div class="team-container">
-            <div class="team-member"><img src="images/lucy-kago.webp" alt="Lucy Kago"><p>Lucy Kago</p></div>
-            <div class="team-member"><img src="images/titus-gitonga.webp" alt="Titus Gitonga"><p>Titus Gitonga</p></div>
-            <div class="team-member"><img src="images/lucas-bell.webp" alt="Lucas Bell"><p>Lucas Bell</p></div>
-            <div class="team-member"><img src="images/jackson-wachiuri.webp" alt="Jackson Wachiuri"><p>Jackson Wachiuri</p></div>
-            <div class="team-member"><img src="images/pauline-tamara.webp" alt="Pauline Tamara"><p>Pauline Tamara</p></div>
+            <div class="team-member"><img src="images/team/lucy-kago.jpg" alt="Lucy Kago"><p>Lucy Kago</p></div>
+            <div class="team-member"><img src="images/team/titus-gitonga.jpg" alt="Titus Gitonga"><p>Titus Gitonga</p></div>
+            <div class="team-member"><img src="images/team/lucas-bell.jpg" alt="Lucas Bell"><p>Lucas Bell</p></div>
+            <div class="team-member"><img src="images/team/jackson-wachiuri.jpg" alt="Jackson Wachiuri"><p>Jackson Wachiuri</p></div>
+            <div class="team-member"><img src="images/team/pauline-tamara.jpg" alt="Pauline Tamara"><p>Pauline Tamara</p></div>
+        </div>
+    </section>
+    
+    <section id="booking">
+        <h2>Book Your Safari</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <section id="games">
+        <h2>Safari Games</h2>
+        <p>Enjoy interactive safari-themed games!</p>
+        <ul>
+            <li><a href="games/memory-game.html">Memory Game</a></li>
+            <li><a href="games/quiz.html">Wildlife Quiz</a></li>
+            <li><a href="games/puzzle.html">Animal Puzzle</a></li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Lenawei Safaris. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click", function() {
+            document.querySelector("nav ul").classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenawei Safaris</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="styles.css" as="style">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            background: #4CAF50;
+            margin: 0;
+        }
+        nav ul li {
+            padding: 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+        }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Lenawei Safaris</h1>
+        <button class="menu-toggle">☰ Menu</button>
+        <nav>
+            <ul>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#itineraries">Itineraries</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#map">Safari Map</a></li>
+                <li><a href="#team">Meet Our Team</a></li>
+                <li><a href="#games">Games</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="wallpaper">
+        <img src="images/wallpaper.jpg" alt="Safari Wallpaper" class="wallpaper">
+    </section>
+    
+    <section id="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item"><img src="images/gallery/lion.jpg" alt="Lion"></div>
+            <div class="gallery-item"><img src="images/gallery/elephants.jpg" alt="Elephants"></div>
+            <div class="gallery-item"><img src="images/gallery/giraffes.jpg" alt="Giraffes"></div>
+            <div class="gallery-item"><img src="images/gallery/zebra.jpg" alt="Zebra"></div>
+            <div class="gallery-item"><img src="images/gallery/cheetah.jpg" alt="Cheetah"></div>
+            <div class="gallery-item"><img src="images/gallery/balloons.jpg" alt="Hot Air Balloon"></div>
+        </div>
+    </section>
+    
+    <section id="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-container">
+            <div class="team-member"><img src="images/team/lucy-kago.jpg" alt="Lucy Kago"><p>Lucy Kago</p></div>
+            <div class="team-member"><img src="images/team/titus-gitonga.jpg" alt="Titus Gitonga"><p>Titus Gitonga</p></div>
+            <div class="team-member"><img src="images/team/lucas-bell.jpg" alt="Lucas Bell"><p>Lucas Bell</p></div>
+            <div class="team-member"><img src="images/team/jackson-wachiuri.jpg" alt="Jackson Wachiuri"><p>Jackson Wachiuri</p></div>
+            <div class="team-member"><img src="images/team/pauline-tamara.jpg" alt="Pauline Tamara"><p>Pauline Tamara</p></div>
         </div>
     </section>
     
