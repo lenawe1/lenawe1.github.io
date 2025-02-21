@@ -5,164 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lenawei Safaris</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preload" href="styles.css" as="style">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-            background: #4CAF50;
-            margin: 0;
-        }
-        nav ul li {
-            padding: 10px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        .menu-toggle {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-            background: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px;
-        }
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-            nav ul {
-                display: none;
-                flex-direction: column;
-                text-align: center;
-                background: #4CAF50;
-                position: absolute;
-                width: 100%;
-                top: 50px;
-                left: 0;
-                padding: 10px 0;
-                transition: max-height 0.3s ease-in-out;
-                max-height: 0;
-                overflow: hidden;
-            }
-            nav ul.active {
-                display: flex;
-                max-height: 500px;
-            }
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            max-width: 400px;
-            margin: auto;
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        input, button {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        button {
-            background: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        button:hover {
-            background: #45a049;
-        }
-        nav ul li a.active {
-            border-bottom: 2px solid yellow;
-            font-weight: bold;
-        }
-    </style>
 </head>
 <body>
     <header>
         <h1>Welcome to Lenawei Safaris</h1>
-        <button class="menu-toggle">☰ Menu</button>
         <nav>
-            <ul>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#itineraries">Itineraries</a></li>
-                <li><a href="#booking">Booking</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#map">Safari Map</a></li>
-                <li><a href="#team">Meet Our Team</a></li>
-                <li><a href="#games">Games</a></li>
-            </ul>
+            <button class="tab-button" data-section="itineraries">Itineraries</button>
+            <button class="tab-button" data-section="testimonials">Testimonials</button>
+            <button class="tab-button" data-section="safari-map">Safari Map</button>
+            <button class="tab-button" data-section="team">Meet Our Team</button>
+            <button class="tab-button" data-section="games">Games & Activities</button>
+            <button class="tab-button" data-section="faqs">FAQs</button>
+            <button class="tab-button" data-section="contact">Contact Us</button>
         </nav>
     </header>
-    
-    <section id="wallpaper">
-        <img src="images/wallpaper.jpg" alt="Safari Wallpaper" class="wallpaper" loading="lazy">
-    </section>
-    
-    <section id="gallery">
-        <h2>Photo Gallery</h2>
-        <div class="gallery-container">
-            <div class="gallery-item"><img src="images/gallery/lion.jpg" alt="Lion" loading="lazy"></div>
-            <div class="gallery-item"><img src="images/gallery/elephants.jpg" alt="Elephants" loading="lazy"></div>
-            <div class="gallery-item"><img src="images/gallery/giraffes.jpg" alt="Giraffes" loading="lazy"></div>
-            <div class="gallery-item"><img src="images/gallery/zebra.jpg" alt="Zebra" loading="lazy"></div>
-            <div class="gallery-item"><img src="images/gallery/cheetah.jpg" alt="Cheetah" loading="lazy"></div>
-            <div class="gallery-item"><img src="images/gallery/balloons.jpg" alt="Hot Air Balloon" loading="lazy"></div>
-        </div>
-    </section>
-    
-    <section id="booking">
-        <h2>Book Your Safari</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="date">Preferred Date:</label>
-            <input type="date" id="date" name="date" required>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-    
+
+    <main>
+        <!-- Itineraries Section -->
+        <section id="itineraries" class="content-section">
+            <h2>Safari Itineraries</h2>
+            <p>Explore our exciting safari packages:</p>
+            <ul>
+                <li><strong>3-Day Safari:</strong> Nairobi - Amboseli - Tsavo - Return</li>
+                <li><strong>5-Day Safari:</strong> Nairobi - Masai Mara - Lake Nakuru - Return</li>
+                <li><strong>7-Day Safari:</strong> Ultimate Kenya Wildlife Experience</li>
+            </ul>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="content-section">
+            <h2>What Our Guests Say</h2>
+            <blockquote>"An unforgettable safari experience! Highly recommended!" – John Doe</blockquote>
+            <blockquote>"The best guided tour I’ve ever had! Lenawei Safaris is top-notch!" – Mary A.</blockquote>
+        </section>
+
+        <!-- Safari Map Section -->
+        <section id="safari-map" class="content-section">
+            <h2>Safari Map</h2>
+            <img src="images/safari-map.jpg" alt="Safari Map" class="map-image">
+        </section>
+
+        <!-- Meet Our Team Section -->
+        <section id="team" class="content-section">
+            <h2>Meet Our Team</h2>
+            <p>Our experienced safari guides ensure an unforgettable adventure.</p>
+            <ul>
+                <li><strong>Lucas Bell</strong> – Lead Safari Guide</li>
+                <li><strong>Jane Wambui</strong> – Wildlife Expert</li>
+                <li><strong>David Kimani</strong> – Tour Planner</li>
+            </ul>
+        </section>
+
+        <!-- Games & Activities Section -->
+        <section id="games" class="content-section">
+            <h2>Games & Activities</h2>
+            <p>Enjoy fun safari-related puzzles, quizzes, and challenges!</p>
+            <button onclick="alert('Coming Soon!')">Play a Quiz</button>
+        </section>
+
+        <!-- FAQs Section -->
+        <section id="faqs" class="content-section">
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>Q: What is the best time for a safari?</strong></p>
+            <p>A: The best time is during the dry season (June to October) when wildlife is easier to spot.</p>
+            
+            <p><strong>Q: Do I need vaccinations before traveling?</strong></p>
+            <p>A: Yes, we recommend Yellow Fever and Malaria vaccinations.</p>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="content-section">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:info@lenaweisafaris.com">info@lenaweisafaris.com</a></p>
+            <p>Phone: +254 712 345 678</p>
+            <p>Follow us on <a href="https://www.instagram.com/belllucas34" target="_blank">Instagram</a> and <a href="https://www.facebook.com/Lucas Bell" target="_blank">Facebook</a></p>
+        </section>
+    </main>
+
     <footer>
         <p>&copy; 2025 Lenawei Safaris. All rights reserved.</p>
     </footer>
-    
+
     <script>
-        document.querySelector(".menu-toggle").addEventListener("click", function() {
-            let navMenu = document.querySelector("nav ul");
-            navMenu.classList.toggle("active");
+        // Hide all sections by default
+        document.querySelectorAll(".content-section").forEach(section => {
+            section.style.display = "none";
         });
-        
-        window.addEventListener("scroll", function() {
-            let sections = document.querySelectorAll("section");
-            let navLinks = document.querySelectorAll("nav ul li a");
-            
-            sections.forEach((section, index) => {
-                let top = window.scrollY;
-                let offset = section.offsetTop - 100;
-                let height = section.offsetHeight;
-                
-                if (top >= offset && top < offset + height) {
-                    navLinks.forEach(link => link.classList.remove("active"));
-                    navLinks[index].classList.add("active");
-                }
+
+        // Button click event to show the correct section
+        document.querySelectorAll(".tab-button").forEach(button => {
+            button.addEventListener("click", function() {
+                let sectionToShow = this.getAttribute("data-section");
+
+                // Hide all sections first
+                document.querySelectorAll(".content-section").forEach(section => {
+                    section.style.display = "none";
+                });
+
+                // Show the selected section
+                document.getElementById(sectionToShow).style.display = "block";
             });
         });
     </script>
